@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/showcenter.css">
+</head>
+<body>
+    <form action="/admin/managecenter">
+        <button id="back">Back</button>
+    </form>
+    <h1>Center Details</h1>
+    <div class="container">
+
+        <div class="center">
+            <h1>Center Details :</h1>
+            <h3>Address: <%= center.caddress %></h3>
+            <h3>District: <%= center.cdistrict %></h3>
+            <h3>Panchayath: <%= center.cpanchayath %></h3>
+            <h3>Pincode: <%= center.cpincode %></h3>
+            <h3>Building Number: <%= center.buildingno %></h3>
+        </div>
+        <div class="contact">
+            <h1>Contact Details :</h1>
+            <h3>Name: <%= center.fullname %></h3>
+            <h3>Address: <%= center.address %></h3>
+            <h3>Phone Number: <%= center.phno %></h3>
+            <h3>Email: <%= center.email %></h3>
+            <h3>Type: <%= center.type %></h3>
+        </div>
+        <div class="actions">
+            <form action="/admin/managecenter/<%= center._id %>/update" method="GET">
+                <button id="update-button" type="submit">Update</button>
+            </form>
+            <form action="/admin/managecenter/<%= center._id %>/delete" method="POST">
+                <button id="delete-button" type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

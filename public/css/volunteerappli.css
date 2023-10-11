@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 300, 400, 500, 600, 700, 800, 908&display-swap');
+
+body{
+    background-color: #fff;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif
+  }
+  .regform form{
+      margin:10rem;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      padding-left: 1rem;
+      border-radius: .5rem;
+      background:#def2f1;
+      height:193vh;
+  }
+  #volappli{
+      font-size: 3rem;
+      color: #2b7a78;
+      text-align: center;
+      font-weight: 900; 
+  }
+  .per-container{
+    margin:5rem;
+  }
+  .heading {
+    margin-right: 10px; 
+    font-size: 1.7rem;
+    color: #2b7a78;
+  }
+  .personal {
+  padding:1rem 12rem;
+  position: relative;
+  top: -50px;
+  }
+  
+  .firstname {
+    width: 40%;
+    padding: 10px 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    left: 50px;
+    top: -10px;
+  }
+  .lastname {
+    width: 40%;
+    padding: 10px 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    left: 50px;
+    top: -10px;
+  }
+  .age{
+    width: 40%;
+    padding: 10px 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    left: 50px;
+    top: -10px;
+  }
+  .dob{
+    width: 42%;
+    padding: 10px 5px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    left: 50px;
+    top: -10px;
+  }
+  .gender{
+    width: 43%;
+    padding: 10px 5px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    left: 50px;
+    top: -10px;
+  }
+  #a-no{
+    width: 42%;
+    padding: 10px 5px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    left: 50px;
+    top: -10px;
+  }
+  .contact{
+    margin-right:5rem;
+  }
+  .contact span {
+    margin-right: 10px; 
+    font-size: 1.7rem;
+    color: #2b7a78;
+  }
+  #phn{
+    width: 25%;
+    padding: 10px 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    left: 10px;
+    top: -10px;
+  }
+  #email{
+    width: 25%;
+    padding: 10px 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    left: 10px;
+    top: -10px;
+  }
+  .input-box{
+    margin-right:5rem;
+    margin-top: 5rem;
+  }
+  .input-box span {
+    margin-right: 10px; 
+    font-size: 1.7rem;
+    color: #2b7a78;
+  }
+  #radd{
+    width: 25%;
+    padding: 10px 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+  }
+  #padd{
+    width: 25%;
+    padding: 10px 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+  }
+  
+.file-upload {
+    position: relative;
+    display: inline-block;
+    margin:5rem;
+  }
+  #upload{
+    margin-left: -5rem;
+    font-size: 1.7rem;
+    color: #2b7a78;
+  }
+  .custom-file-upload {
+    display: inline-block;
+    padding: 9px 110px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    margin-left: 7rem;
+  }
+  
+  .input-file {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .custom-certi {
+    padding: 10px 40px;
+    margin: 30px ;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  .input_box{
+    margin-right:1rem;
+  }
+  .input_box label {
+    margin-right: 10px; 
+    font-size: 1.7rem;
+    color: #2b7a78;
+  }
+  .input_box span{
+    font-size: 1.5rem;
+    color:#2b7a78;
+  }
+  .cat{
+    margin-right:1rem;
+    margin-top: 6rem;
+  }
+  .cat label {
+    margin-right: 10px; 
+    font-size: 1.7rem;
+    color: #2b7a78;
+  }
+  .cat span{
+    font-size: 1.2rem;
+    color: #2b7a78;
+  }
+  .input-name{
+    margin-right:1rem; 
+    margin-top: 6rem;
+  }
+  .input-name label{
+    margin-right: 10px; 
+    font-size: 1.7rem;
+    color: #2b7a78;
+  }
+  .centers{
+    width: 30%;
+    padding: 10px 10px;
+    margin: 10px ;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: #2b7a78;
+  }
+  .submit-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .submit-box input[type="submit"] {
+    
+    border-radius: 10px;
+    background-color: #2b7a78;
+    color: #def2f1;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.3rem;
+    position: relative;
+    left: 20px;
+    top: 60px;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 2rem;
+  }
+  
+  .submit-box input[type="submit"]:hover {
+    background-color: #2b7a77aa;
+  }
+
+#center{
+  font-size: 1.5rem;
+  position: relative;
+  top: 50px;
+  color: #2b7a78;
+}  

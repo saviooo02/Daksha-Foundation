@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 300, 400, 500, 600, 700, 800, 908&display-swap');
+
+body{
+    background-color: #fff;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif
+  }
+  .main form{
+      margin:10rem;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      padding-left: 1rem;
+      border-radius: .5rem;
+      background:#def2f1;
+      height:90vh;
+  }
+  #cenappli{
+      font-size: 3rem;
+      color: #2b7a78;
+      text-align: center;
+      font-weight: 900; 
+  }
+  .input-field{
+    margin:5rem;
+  }
+  .heading {
+    margin-right: 10px; 
+    font-size: 1.7rem;
+    color: #2b7a78;
+  }
+  .applicant {
+  padding:1rem 12rem;
+  position: relative;
+  top: -50px;
+  }
+  .name {
+    width: 40%;
+    padding: 10px 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    left: 50px;
+    top: -10px;
+  }
+  .address {
+    width: 40%;
+    padding: 10px 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    left: 50px;
+    top: -10px;
+  }
+  .phno{
+    width: 40%;
+    padding: 10px 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    left: 50px;
+    top: -10px;
+  }
+  .email{
+    width: 42%;
+    padding: 10px 5px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    left: 50px;
+    top: -10px;
+  }
+  .input_box{
+   position: relative;
+   margin-top: -50px;
+   margin-bottom:70px;
+  }
+  .input_box label {
+    margin-right: 10px; 
+    font-size: 1.7rem;
+    color: #2b7a78;
+  }
+  .input_box span{
+    font-size: 1rem;
+    color: #2b7a78;
+  }
+
+  @media screen and (max-width: 991px) {
+    .main form {
+      margin: 10%;
+    }
+    .input-field {
+      margin: 5%;
+    }
+    .applicant {
+      padding: 1rem 2rem;
+      top: 0;
+    }
+    .name,
+    .address,
+    .phno,
+    .email{
+      width: 40%;
+      position: relative;
+      left:-3rem;
+    }
+  
+    .input_box{
+        margin-right:1rem;
+    }
+    .input_box span{
+        font-size: 1rem;
+    }
+  }
+  @media (max-width:600px){
+    .name,
+    .address,
+    .phno,
+    .email{
+      width: 100%;
+      position: relative;
+      left:-3rem;
+    }
+}
+.file-upload {
+    position: relative;
+    display: inline-block;
+    margin:5rem;
+  }
+  #upload{
+    margin-left: -5rem;
+    font-size: 1.7rem;
+    color: #2b7a78;
+  }
+  .p1 {
+    display: inline-block;
+    padding: 9px 110px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    margin-left: 2rem;
+  }
+  
+  .input-file {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .p2 {
+    padding: 10px 110px;
+    margin: 30px ;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  .p3 {
+    display: inline-block;
+    padding: 9px 110px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    margin-left: 7.5rem;
+  }
+  .p4 {
+    padding: 10px 110px;
+    margin: 30px ;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 991px) {
+    
+    .p1,.p3{
+      width: 20%;
+      position: relative;
+    }
+    .p2,.p4{
+      width: 20%;
+      position: relative;
+      left: 5.5rem;
+    }
+  }
+  @media (max-width:600px){
+    .file-upload{
+      margin-right: 5%;
+    }
+    .p1,.p2,.p4{
+      width: 20%;
+      position: relative;
+      left:-8rem;
+    }
+    .p3{
+    width: 20%;
+    position: relative;
+    left:-13.5rem;
+  }
+}
+.input-box  {
+    padding:1rem 1rem;
+    position: relative;
+    top: -50px;
+    left:-1rem;
+}
+.input-box span {
+    margin-right: 5px; 
+    font-size: 1.7rem;
+    color: #2b7a78;
+  }
+#add {
+      width: 26%;
+      padding: 10px 10px;
+      margin: 10px ;
+      display: inline-block;
+      border: .5px solid #000000;
+      border-radius: 3px;
+      font-size: 1rem;
+}
+#cdistrict {
+      width: 28%;
+      padding: 10px 10px;
+      margin-left: 20px ;
+      display: inline-block;
+      border: .5px solid #000000;
+      border-radius: 3px;
+      font-size: 1rem;
+    }
+#panchayath{
+      width: 26%;
+      padding: 10px 10px;
+      margin-left: 217px ;
+      display: inline-block;
+      border: .5px solid #000000;
+      border-radius: 3px;
+      font-size: 1rem;
+    }
+#pincode{
+    width: 26%;
+    padding: 10px 10px;
+    margin-left: 30px ;
+      display: inline-block;
+      border: .5px solid #000000;
+      border-radius: 3px;
+      font-size: 1rem;
+    }
+.input_box{
+    margin-right:5rem;
+}
+.input_box span {
+    margin-right: 10px; 
+    font-size: 1.7rem;
+    color: #2b7a78;
+}
+
+
+#bldno{
+  position: relative;
+  top: 30px;
+}
+.no{
+    width: 26%;
+    padding: 10px 10px;
+    margin: 1px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    position: relative;
+    top:30px;
+}
+@media (max-width:600px){
+    .input_box{
+      margin-right: 5%;
+    }
+    .no{
+      width: 90%;
+      position: relative;
+      left:-1rem;
+    }
+}  
+#upload{
+  font-size: 1.4rem;
+  position: relative;
+  left: 80px;
+  font-weight: 500;
+}
+
+#photoupload{
+  font-size: 1.4rem;
+  position: relative;
+  left:80px;
+  color: #2b7a78;
+}
+
+
+.butt{
+  font-size: 1.3rem;
+  position: relative;
+  left: 450px;
+  top: 50px;
+  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background-color: #2b7a78;
+  color: #fff;
+  border: 0;
+}

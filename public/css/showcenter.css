@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 300, 400, 500, 600, 700, 800, 908&display-swap');
+
+*{
+    background-color: #def2f1;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    position: relative;
+    margin-left: 650px;
+    color: #2b7a78 ;
+    font-size: 1.3rem;
+    text-decoration: underline;
+
+}
+
+.container{
+    position: relative;
+    margin-left: 250px;
+    background-color: #fff;
+    color: #2b7a78;
+    width: 1000px;
+    height: 800px;
+    top: 20px;
+    border-radius: 35px;
+}
+
+.container h3{
+    background-color: #fff;
+}
+
+.center{
+    background-color: #fff;
+}
+
+.center h1{
+    background-color: #fff;
+    position: relative;
+    right: 500px;
+    top: 50px;
+    text-decoration: none;
+}
+
+.center h3{
+    position: relative;
+    left: 400px;
+    width: 300px;
+}
+
+.contact{
+    background-color: #fff;
+}
+
+.contact h1{
+    background-color: #fff;
+    position: relative;
+    right: 500px;
+    top: 50px;
+    text-decoration: none;
+}
+
+.contact h3{
+    position: relative;
+    left: 400px;
+    width: 300px;
+}
+
+h2{
+    font-size: 1.2rem;
+    color: #2b7a78;
+    position: relative;
+    top: -800px;
+    background-color: #fff;
+    width: 100px;
+    left: 400px;
+}
+
+img{
+
+    display: flex;
+    position: relative;
+    top: -840px;
+    left: 600px;
+    margin: 20px;
+}
+
+button{
+    padding: 10px;
+    width: 90px;
+    border: 0;
+    left: 1%;  
+}
+
+.actions{
+    background-color: #fff;
+    width: 0px;
+}
+
+#update-button{
+    background-color: #008CBA;
+    position: relative;
+    margin-left: 340px;
+    color: #fff;
+    top: 50px;
+}
+
+#delete-button{
+    color: #fff;
+    background-color: maroon;
+    position: relative;
+    margin-left: 500px;
+    top: 10px;
+}
+
+#back{
+    color: #2b7a78;
+    font-size: 1.3rem;
+}

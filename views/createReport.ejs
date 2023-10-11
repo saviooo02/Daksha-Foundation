@@ -1,0 +1,36 @@
+<% layout('layout/volboilerplate') %>
+
+<div class="report-header">
+    <h1>Create a new Report</h1>
+</div>    
+
+<div class="report-form">
+    <form action='/volunteer/createreport' method="POST">
+        <div>
+            <h4>Enter title :</h4>
+            <input type="text" name="title">
+        </div>
+
+        <div class="cat">
+            <select>
+              <option disabled selected hidden>Category</option>
+              <option>Subjects</option>
+              <option>Moral Science</option>
+              <option>Sports</option>
+              <option>Personal Hygiene</option>
+              <option>Craft</option>
+              <option>Social Studies</option>
+            </select>
+          </div>
+
+        <div>
+            <h4>Enter description :</h4>
+            <input type="text" name="description">
+        </div>
+        <div>
+            <h4>Enter date :</h4>
+            <input type="text" name="date">
+        </div>
+      <button>Create</button>
+    </form>
+</div>    

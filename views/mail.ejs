@@ -1,0 +1,19 @@
+<% layout('layout/boilerplate') %>
+
+  <h1 class="mail-heading">Communication</h1>
+  <form class="mail-form"  action="/admin/sendmail" method="POST">
+    <label for="recipient">Recipient:</label>
+    <select id="recipient" name="recipient" required>
+      <% volunteers.forEach(function(volunteer) { %>
+        <option value="<%= volunteer.email %>"><%= volunteer.email %></option>
+      <% }); %>
+    </select><br>
+
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" required><br>
+
+    <label for="body">Message:</label><br>
+    <textarea id="body" name="body" rows="5" cols="50" required></textarea><br>
+
+    <button class="mail-button" type="submit">Send</button>
+  </form>

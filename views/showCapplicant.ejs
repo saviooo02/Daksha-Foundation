@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="/css/showcapplicant.css">
+    <h1>Center Applicant Details</h1>
+    <div class="container">
+
+        <div class="center">
+            <h1>Center Details :</h1>
+        <h3>Address :<%= capplicant.caddress %></h3>
+        <h3>District :<%= capplicant.cdistrict %></h3>
+        <h3>Panchayath :<%= capplicant.cpanchayath %></h3>
+        <h3>Pincode :<%= capplicant.cpincode %></h3>
+        <h3>Building Number :<%= capplicant.buildingno %></h3>
+        </div>
+        <div class="contact">
+            <h1>Contact Details :</h1>
+        <h3>Name :<%= capplicant.fullname %></h3>
+        <h3>Address :<%= capplicant.address %></h3>
+        <h3>Phone Number :<%= capplicant.phno %></h3>
+        <h3>Email :<%= capplicant.email %></h3>
+        <h3>Type :<%= capplicant.type %></h3>
+        </div>
+    </div>
+
+
+    <h2>Photos:</h2>
+    <% capplicant.photos.forEach(function(photo) { %>
+        <img src="/uploads/<%= photo %>" alt="Photo" width="300">
+    <% }); %>
+
+    <form action="/admin/dashboard/center/<%= capplicant._id %>/move" method="POST">
+        <button id="accept" type="submit">Accept</button>
+    </form>
+
+    <form action="/admin/dashboard/center/<%= capplicant._id %>/delete" method="POST">
+        <button id="reject" type="submit">Reject</button>
+    </form>
+</body>
+</html>

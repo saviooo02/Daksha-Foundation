@@ -1,0 +1,67 @@
+<% layout('layout/boilerplate') %>
+
+<script>
+    function validateForm() {
+        var volid = document.getElementById("volid").value;
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (volid === "" || username === "" || password === "") {
+            alert("Please fill in all the required fields.");
+            return false;
+        }
+    }
+</script>
+
+<div class="register">
+    <h1>Register Volunteers</h1>
+    <form action="/admin/register" method="POST" onsubmit="return validateForm()">
+        
+        <div class="Volunteer">
+            <label for="volid">Select Volunteer:</label>
+            <select name="volid" id="volid">
+                <% vols.forEach(function(vol) { %>
+                    <option value="<%= vol.shortId %>"><%= vol.shortId %></option>
+                <% }); %>
+            </select>
+        </div>
+
+        <div>
+            <label for="username">Enter Username : </label>
+            <input type="text" name="username" id="username" placeholder="Username">
+        </div>
+        <div>
+            <label for="password">Enter Password : </label>
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <button type="submit">Register</button>
+    </form>
+</div>
+<div class="vol-cred">
+    <h2>Volunteer Credentials</h2>
+    <table class="volcred-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let volcreds of volcred) { %>
+            <tr>
+                <td><%= volcreds.volid %></td>
+                <td><%= volcreds.username %></td>
+                <td>
+                    <form action="/admin/register/<%= volcreds._id %>?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="delete-button">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>

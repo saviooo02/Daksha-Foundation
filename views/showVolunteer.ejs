@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/showapplicant.css">
+</head>
+<body>
+
+  <form action="/admin/managevol">
+    <button id="back">Back</button>
+  </form>
+
+    <h1>Volunteer Details</h1>
+   
+  
+    <div class="container">
+        <% if (volunteer.image) { %>
+            <img src="/uploads/<%= volunteer.image %>" width="300"  alt="volunteer Image">
+        <% } %>
+      <div class="personal">
+        <h1>Personal Details :</h1>
+     
+        <h3>First Name: <%= volunteer.firstname %></h3>
+        <h3>Last Name: <%= volunteer.lastname %></h3>
+        <h3>Age: <%= volunteer.age %></h3>
+        <h3>Date Of Birth: <%= volunteer.dobFormatted %></h3>
+        <h3>Gender: <%= volunteer.gender %></h3>
+      </div>
+      <div class="contact">
+        <h1>Contact & Other Details :</h1>
+
+        <h3>Aadhar: <%= volunteer.aadhar %></h3>
+        <h3>Phone Number: <%= volunteer.phno %></h3>
+        <h3>Address: <%= volunteer.address %></h3>
+        <h3>Day Preference: <%= volunteer.dayPreference %></h3>
+        <h3>Category: <%= volunteer.categories %></h3>
+        <h3>Email: <%= volunteer.email %></h3>
+        <h3>Center: <%= volunteer.center %></h3>
+       </div>
+    </div>
+
+    <div class="actions">
+      <form action="/admin/managevol/<%= volunteer._id %>/update" method="GET">
+          <button id="update-button" type="submit">Update</button>
+      </form>
+      <form action="/admin/managevol/<%= volunteer._id %>/delete" method="POST">
+          <button id="delete-button" type="submit">Delete</button>
+      </form>
+  </div>
+
+
+</body>
+</html>    

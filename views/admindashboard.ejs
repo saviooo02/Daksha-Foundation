@@ -1,0 +1,59 @@
+<% layout('layout/boilerplate') %>
+<div class="viewAppli-header">
+    <h2>Volunteer Applicants</h2>
+
+    <table class="applicant-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Center</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let applicant of applicants) { %>
+            <tr>
+                <td><%= applicant.firstname %></td>
+                <td><%= applicant.age %></td>
+                <td><%= applicant.center %></td>
+                <td><%= applicant.email %></td>
+                <td>
+                <a href="/admin/dashboard/<%= applicant._id %>">View More</a>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+    </div>
+</div>
+<div class="viewCappli-header">
+    <h2>Center Applicants</h2>
+    
+        <table class="capplicant-table">
+            <thead>
+                <tr>
+                    <th>District</th>
+                    <th>Panchayath</th>
+                    <th>Building No.</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let capplicant of capplicants) { %>
+                <tr>
+                    <td><%= capplicant.cdistrict %></td>
+                    <td><%= capplicant.cpanchayath %></td>
+                    <td><%= capplicant.buildingno %></td>
+                    <td><%= capplicant.type %></td>
+                    <td>
+                    <a href="/admin/dashboard/center/<%= capplicant._id %>">View More</a>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+        </div>
+    </div>

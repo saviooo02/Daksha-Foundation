@@ -1,0 +1,721 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* ===== Colors ===== */
+    --primary-color: #def2f1;
+    --panel-color: #FFF;
+    --text-color: #000;
+    --black-light-color: #707070;
+    --border-color: #e6e5e5;
+    --title-icon-color: #fff;
+
+    /* ====== Transition ====== */
+    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
+    --tran-03: all 0.2s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #def2f1;
+}
+
+/* === Custom Scroll Bar CSS === */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #eee7d3;
+}
+
+body.dark::-webkit-scrollbar-thumb:hover,
+body.dark .activity-data::-webkit-scrollbar-thumb:hover {
+    background: #3A3B3C;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background-color: #88bdbc;
+    border-right: 1px solid var(--border-color);
+
+}
+
+nav.close {
+    width: 73px;
+}
+
+nav .logo-name {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo-image {
+    display: flex;
+    justify-content: center;
+    min-width: 45px;
+}
+
+nav .logo-image img {
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav .logo-name .logo_name {
+    font-size: 22px;
+    font-weight: 400;
+    color: #2b7a78;
+    font-size: 1.5rem;
+    letter-spacing: 6px;
+    margin-left: 45px;
+    transition: var(--tran-05);
+}
+
+nav.close .logo_name {
+    opacity: 0;
+    pointer-events: none;
+}
+
+nav .menu-items {
+    margin-top: 40px;
+    height: calc(100% - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-items li {
+    list-style: none;
+}
+
+.menu-items li a {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-links li a:hover:before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+body.dark li a:hover:before {
+    background-color: var(--text-color);
+}
+
+.menu-items li a i {
+    font-size: 24px;
+    min-width: 45px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #def2f1;
+}
+
+.menu-items li a .link-name {
+    font-size: 18px;
+    font-weight: 400;
+    color: #def2f1;
+    transition: var(--tran-05);
+}
+
+nav.close li a .link-name {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-links li a:hover i,
+.nav-links li a:hover .link-name {
+    color: #2b7a78;
+}
+
+body.dark .nav-links li a:hover i,
+body.dark .nav-links li a:hover .link-name {
+    color: var(--text-color);
+}
+
+.menu-items .logout-mode {
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+.menu-items .mode {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+button {
+    background-color: #def2f1;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: #2b7a78;
+    transition: var(--tran-05);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        width: 73px;
+    }
+
+    nav.close {
+        width: 250px;
+    }
+
+    nav .logo_name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav.close .logo_name {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    nav li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav.close li a .link-name {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    nav~.dashboard {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+
+    nav.close~.dashboard {
+        left: 250px;
+        width: calc(100% - 250px);
+    }
+
+    nav~.dashboard .top {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+
+    nav.close~.dashboard .top {
+        left: 250px;
+        width: calc(100% - 250px);
+    }
+
+    .activity .activity-data {
+        overflow-X: scroll;
+    }
+}
+
+@media (max-width: 780px) {
+    .dash-content .boxes .box {
+        width: calc(100% / 2 - 15px);
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 560px) {
+    .dash-content .boxes .box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    nav {
+        width: 0px;
+    }
+
+    nav.close {
+        width: 73px;
+    }
+
+    nav .logo_name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav.close .logo_name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav.close li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav~.dashboard {
+        left: 0;
+        width: 100%;
+    }
+
+    nav.close~.dashboard {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+
+    nav~.dashboard .top {
+        left: 0;
+        width: 100%;
+    }
+
+    nav.close~.dashboard .top {
+        left: 0;
+        width: 100%;
+    }
+}
+
+/* admin dashboard 1st function*/
+
+.viewAppli-header h2 {
+    position: relative;
+    top: 30px;
+    margin-left: 740px;
+    color: #2b7a78;
+    font-size: 1.4rem;
+    text-decoration: underline;
+
+}
+
+.applicant-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: 500px;
+    top: 50px;
+}
+
+.applicant-table thead tr {
+    background-color: #2b7a78;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.applicant-table th,
+.applicant-table td {
+    padding: 12px 15px;
+}
+
+.applicant-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.applicant-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.applicant-table tbody tr:last-of-type {
+    border-bottom: 2px solid #2b7a78;
+}
+
+.applicant-table tbody tr.active-row {
+    font-weight: bold;
+    color: #2b7a78;
+}
+
+.viewCappli-header h2 {
+    position: relative;
+    top: 450px;
+    margin-left: 750px;
+    color: #2b7a78;
+    text-decoration: underline;
+    font-size: 1.4rem;
+
+}
+
+.capplicant-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: 32%;
+    top: 505px;
+}
+
+.capplicant-table thead tr {
+    background-color: #2b7a78;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.capplicant-table th,
+.capplicant-table td {
+    padding: 12px 15px;
+}
+
+.capplicant-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.capplicant-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.capplicant-table tbody tr:last-of-type {
+    border-bottom: 2px solid #2b7a78;
+}
+
+.capplicant-table tbody tr.active-row {
+    font-weight: bold;
+    color: #2b7a78;
+}
+
+
+/*admin dashboard 2nd function */
+.active-vol {
+    position: relative;
+    margin-left: 800px;
+    top: 20px;
+    color: #2b7a78;
+    font-size: 0.7rem;
+    text-decoration: underline;
+}
+
+.volunteer-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: 32%;
+    top: 50px;
+    
+}
+
+.volunteer-table thead tr {
+    background-color: #2b7a78;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.volunteer-table th,
+.volunteer-table td {
+    padding: 12px 15px;
+}
+
+.volunteer-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.volunteer-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.volunteer-table tbody tr:last-of-type {
+    border-bottom: 2px solid #2b7a78;
+}
+
+.volunteer-table tbody tr.active-row {
+    font-weight: bold;
+    color: #2b7a78;
+}
+
+
+/*admin dashboard 3rd function */
+.register h1 {
+    color: #2b7a78;
+    position: relative;
+    margin-left: 800px;
+    top: 20px;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.register form {
+    font-size: 1.3rem;
+    position: relative;
+    margin-left: 400px;
+    top: 50px;
+    color: #2b7a78;
+}
+
+.register input {
+    position: relative;
+    top: -3px;
+    margin-top: 20px;
+    font-size: large;
+}
+
+.register button {
+    background-color: #2b7a78;
+    color: #def2f1;
+    position: relative;
+    left: 120px;
+    top: 10px;
+    font-size: 1rem;
+}
+
+.vol-cred h2{
+    position: relative;
+    top: 100px;
+    left: 790px;
+    color: #2b7a78;
+    text-decoration: underline;
+}
+
+.volcred-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: 720px;
+    top: 330px;
+    
+}
+
+.volcred-table thead tr {
+    background-color: #2b7a78;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.volcred-table th,
+.volcred-table td {
+    padding: 12px 15px;
+}
+
+.volcred-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.volcred-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.volcred-table tbody tr:last-of-type {
+    border-bottom: 2px solid #2b7a78;
+}
+
+.volcred-table tbody tr.active-row {
+    font-weight: bold;
+    color: #2b7a78;
+}
+
+
+
+/*admin dashboard 4th function */
+
+.active-center h1 {
+    position: relative;
+    top: 30px;
+    margin-left: 800px;
+    color: #2b7a78;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+.center-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: 35%;
+    top: 50px;
+    
+}
+
+.center-table thead tr {
+    background-color: #2b7a78;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.center-table th,
+.center-table td {
+    padding: 12px 15px;
+}
+
+.center-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.center-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.center-table tbody tr:last-of-type {
+    border-bottom: 2px solid #2b7a78;
+}
+
+.center-table tbody tr.active-row {
+    font-weight: bold;
+    color: #2b7a78;
+}
+
+/* admin dasboard 5th function */
+
+.report1-header{
+    font-size: 1.1rem;
+    color: #2b7a78;
+    position: relative;
+    margin-left: 800px;
+    text-decoration: underline;
+    top: 20px;
+}
+
+.report-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: 650px;
+    top: 50px;
+    
+}
+
+.report-table thead tr {
+    background-color: #2b7a78;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.report-table th,
+.report-table td {
+    padding: 12px 15px;
+}
+
+.report-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.report-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.report-table tbody tr:last-of-type {
+    border-bottom: 2px solid #2b7a78;
+}
+
+.report-table tbody tr.active-row {
+    font-weight: bold;
+    color: #2b7a78;
+}
+
+
+/* admin dashboard 6th function (send mails) */
+
+.mail-heading {
+    position: relative;
+    margin-left: 850px;
+    top: 20px;
+    color: #2b7a78;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.mail-form{
+    position: relative;
+    margin-left: 300px;
+    top: 60px;
+    font-size: 1.2rem;
+    color: #2b7a78;
+    display: flex;
+    flex-direction: column;
+}
+
+.mail-form input,textarea{
+    margin-bottom: -20px;
+    padding: 5px;
+    width: 600px;
+    font-size: large;
+}
+
+.mail-form select{
+    font-size: 1.3rem;
+    width: 600px;
+}
+
+.mail-button{
+    background-color: #2b7a78;
+    color: #def2f1;
+    padding: 1px;
+    width: 70px;
+}
+
+/* vol dashboard */
+.vol-header h1 {
+    color: #2b7a78;
+    position: relative;
+    margin-left: 650px;
+    top: 200px;
+}
+
+/* vol dashboard 1st function */
+
+.report-header{
+    color: #2b7a78;
+    position: relative;
+    margin-left: 820px;
+    top: 20px;
+}
+

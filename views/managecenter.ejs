@@ -1,0 +1,34 @@
+<% layout('layout/boilerplate') %>
+
+<div class="active-center">
+    <h1>Active Centers</h1>
+</div>
+
+
+<table class="center-table">
+    <thead>
+        <tr>
+            <th>District</th>
+            <th>Panchayath</th>
+            <th>Type</th>
+            <th>Center ID</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(let centers of center) { %>
+        <tr>
+            <td><%= centers.fullname %></td>
+            <td><%= centers.cpanchayath %></td>
+            <td><%= centers.type %></td>
+            <td><%= centers.shortId2 %></td>
+            <td>
+                <a href="/admin/managecenter/<%= centers._id %>">View More</a>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+</div>
+</div>
+</div>

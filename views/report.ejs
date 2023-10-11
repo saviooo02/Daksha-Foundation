@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Form</title>
+    <script>
+        function validateForm() {
+            var title = document.getElementById("title").value;
+            var date = document.getElementById("date").value;
+            var category = document.getElementById("category").value;
+            var hours = document.getElementById("hours").value;
+            var center = document.getElementById("center").value;
+            var volunteer = document.getElementById("volunteer").value;
+            var description = document.getElementById("description").value;
+
+            if (title === "" || date === "" || category === "" || hours === "" || center === "" || volunteer === "" || description === "") {
+                alert("Please fill in all the required fields.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<link rel="stylesheet" href="/css/report.css">
+<body>
+    <form action="/volunteer/viewreport">
+        <button id="back">Back</button>
+    </form>
+    <h2 id="rep">  REPORT FORM  </h2> 
+    <div class="main">
+        <form action="/volunteer/createreport" method="POST" onsubmit="return validateForm()">
+            <div class="input-field">
+                    <span class="heading">Class Details:</span>
+                    <div class="detail">
+                        <input type="text" class="title" name="title" id="title" placeholder="Title of the class">
+                        <input type="date" class="dob" name="date" id="date" placeholder="date">                     
+                  
+                        <div class="cat">
+                            <select name="category" id="category">
+                              <option disabled selected hidden>Category</option>
+                              <option>Subjects</option>
+                              <option>Moral Science</option>
+                              <option>Sports</option>
+                              <option>Personal Hygiene</option>
+                              <option>Craft</option>
+                              <option>Social Studies</option>
+                            </select>
+                        </div>
+                        <input type="text" class="hrs" name="hours" id="hours" placeholder="Hours">
+                    </div>
+                    <div class="input-box">
+                        <label id="selectcenter" for="center">Select Center ID:</label>
+                        <select name="center" id="center">
+                          <% centers.forEach(function(center) { %>
+                            <option value="<%= center.shortId2 %>"><%= center.shortId2 %></option>
+                          <% }); %>
+                        </select>
+
+                        <label id="selectvol" for="volunteer">Select Volunteer ID:</label>
+                        <select name="volunteer" id="volunteer">
+                          <% volunteers.forEach(function(volunteer) { %>
+                            <option value="<%= volunteer.shortId %>"><%= volunteer.shortId %></option>
+                          <% }); %>
+                        </select>
+
+                        <span id="desc">Description:</span>
+                        <input type="text" name="description" id="description" class="des" placeholder="Details of the class">
+                    </div>
+                   
+            </div>
+
+            <div class="submit-box">
+                <input type="Submit" value="Submit">
+            </div> 
+        </form>
+    </div>
+</body>
+</html>

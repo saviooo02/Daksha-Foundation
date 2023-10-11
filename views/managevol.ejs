@@ -1,0 +1,34 @@
+<% layout('layout/boilerplate') %>
+
+<div class="active-vol">
+    <h1>Active Volunteers</h1>
+</div>
+
+
+    <table class="volunteer-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Center</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let volunteers of volunteer) { %>
+            <tr>
+                <td><%= volunteers.firstname %></td>
+                <td><%= volunteers.shortId %></td>
+                <td><%= volunteers.center %></td>
+                <td><%= volunteers.email %></td>
+                <td>
+                    <a href="/admin/managevol/<%= volunteers._id %>">View More</a>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+    </div>
+</div>
+</div>

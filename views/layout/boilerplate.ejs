@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/css/boilerplate.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Admin Dashboard Panel</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <span class="logo_name">DAKSHA</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="/admin/dashboard">
+                    <i class=" uil uil-files-landscapes"></i>
+                    <span class="link-name">View Applicants</span>
+                </a></li>
+                <li><a href="/admin/managevol">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Manage Volunteers</span>
+                </a></li>
+                <li><a href="/admin/register">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Register Volunteers</span>
+                </a></li>
+                <li><a href="/admin/managecenter">
+                    <i class=" uil uil-estate"></i>
+                    <span class="link-name">Manage Centers</span>
+                </a></li>
+                <li><a href="/admin/viewreport">
+                    <i class="uil uil-thumbs-up"></i>
+                    <span class="link-name">View Reports</span>
+                </a></li>
+                <li><a href="/admin/sendmail">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Communication</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <form action="/logout" method="POST" class="link-name">
+                        <button>Logout</button>   
+                    </form>
+                </a></li>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <%- body %>
+    <script src="script.js"></script>
+</body>
+</html>

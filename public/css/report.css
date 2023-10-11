@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 300, 400, 500, 600, 700, 800, 908&display-swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  font-size: 1rem;
+}
+
+  .main form{
+      margin:10rem;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      padding-left: 1rem;
+      border-radius: .5rem;
+      background:#def2f1;
+      height:800px ;
+  }
+  #rep{
+      font-size: 3rem;
+      color: #2b7a78;
+      text-align: center;
+      font-weight: 900; 
+  }
+  .input-field{
+    margin:5rem;
+  }
+  .heading {
+    margin-right: 10px; 
+    font-size: 1.7rem;
+    color: #2b7a78;
+  }
+  .detail {
+  padding:1rem 12rem;
+  position: relative;
+  top: -60px;
+  margin-left: 20px;
+  }
+  .title {
+    width: 40%;
+    padding: 10px 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .dob {
+    width: 40%;
+    padding: 10px 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+  }
+  .cat {
+    width: 43.5%;
+    padding: 10px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    
+    background-color: #FFFFFF; 
+    box-sizing: border-box; 
+  }
+  .cat select {
+    width: 100%; 
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+  .hrs{
+    width: 42%;
+    padding: 10px 5px;
+    margin: 10px ;
+    display: inline-block;
+    border: .5px solid #000000;
+    border-radius: 3px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  @media screen and (max-width: 991px) {
+    .main form {
+      margin: 10%;
+    }
+    .input-field {
+      margin: 5%;
+    }
+    .details {
+      padding: 1rem 2rem;
+      top: 0;
+    }
+    .title,.dob,.cat,.hrs{
+      width: 40%;
+      position: relative;
+      left:-3rem;
+    }
+  }
+  @media (max-width:600px){
+    .title,.dob,.cat,.hrs{
+      width: 100%;
+      position: relative;
+      left:-3rem;
+    }
+}
+#center{
+  font-size: 1.2rem;
+  position: relative;
+  top: -50px;
+}
+
+#selectcenter{
+  font-size: 1.5rem;
+  position: relative;
+  top: -50px;
+  color: #2b7a78;
+}
+
+#selectvol{
+  font-size: 1.5rem;
+  position: relative;
+  top: 30px;
+  left: -300px;
+  color: #2b7a78;
+}
+
+#volunteer{
+  position: relative;
+  left: -300px;
+  top: 30px;
+  font-size: 1.2rem;
+}
+
+#desc{
+  position: relative;
+  left: -635px;
+  top: 100px;
+  color: #2b7a78;
+}
+
+.des{
+  position: relative;
+  left: -50px;
+  top: 120px;
+}
+
+.input-box span {
+    margin-right: 5px; 
+    font-size: 1.7rem;
+    color: #2b472b;
+  }
+
+
+.input_box{
+        margin-right:5rem;
+    }
+.input_box span {
+        margin-right: 10px; 
+        font-size: 1.7rem;
+        color: #2b472b;
+    }
+.des{
+        width: 63%;
+        padding-bottom: 10rem;
+        margin-left: 50px;
+        display: inline-block;
+        border: .5px solid #000000;
+        border-radius: 3px;
+        font-size: 1rem;
+}
+
+      @media screen and (max-width: 991px) {
+        
+        .ph1,.ph3{
+          width: 20%;
+          position: relative;
+        }
+        .ph2,.ph4{
+          width: 20%;
+          position: relative;
+          left: 5.5rem;
+        }
+      }
+      @media (max-width:600px){
+        .file-upload{
+          margin-right: 5%;
+        }
+        .ph1,.ph2,.ph4{
+          width: 20%;
+          position: relative;
+          left:-8rem;
+        }
+        .ph3{
+        width: 20%;
+        position: relative;
+        left:-13.5rem;
+      }
+    }
+
+    .submit-box input[type="submit"],
+    .submit-box input[type="reset"] {
+      padding: 15px 50px;
+      margin: 100px 10px;
+      font-size: 1.2rem;
+      background-color: #2b7a78;
+      color: #def2f1;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      margin-left: 500px;
+      top: -10px;
+    }
+
+    #back{
+      color: #2b7a78;
+      font-size: 1.3rem;
+      border: 0;
+      background-color: #fff;
+      color: #2b7a78;
+  }

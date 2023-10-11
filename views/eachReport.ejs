@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/eachreport.css">
+</head>
+<body>
+    <form action="/admin/viewreport">
+        <button id="back">Back</button>
+    </form>
+    <h1>Report Details</h1>
+    <div class="container">
+        <h3>Title: <%= report.title %></h3>
+        <h3>Description: <%= report.description %></h3>
+        <h3>Date: <%= report.date %></h3>
+        <h3>Hours: <%= report.hours %></h3>
+        <h3>Category: <%= report.category %></h3>
+        <h3>Center ID: <%= report.center %></h3>
+        <h3>Volunteer ID: <%= report.volunteer %></h3>
+    </div>
+    <form action="/admin/viewreport/<%= report._id %>/delete" method="POST">
+        <button id="delete-button" type="submit">Delete</button>
+    </form>
+
+</body>
+</html>

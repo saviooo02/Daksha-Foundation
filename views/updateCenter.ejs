@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Center</title>
+    <link rel="stylesheet" href="/css/updatecenter.css">
+</head>
+<body>
+    <h1 class="centered">Update Center</h1>
+    
+    <div class="container">
+        <form action="/admin/managecenter/<%= center._id %>/update" method="POST">
+            <label for="caddress">Center Address:</label>
+            <input type="text" id="caddress" name="caddress" value="<%= center.caddress %>" required>
+            
+            <label for="cdistrict">Center District:</label>
+            <input type="text" id="cdistrict" name="cdistrict" value="<%= center.cdistrict %>" required>
+            
+            <label for="cpanchayath">Center Panchayath:</label>
+            <input type="text" id="cpanchayath" name="cpanchayath" value="<%= center.cpanchayath %>" required>
+            
+            <label for="cpincode">Center Pincode:</label>
+            <input type="text" id="cpincode" name="cpincode" value="<%= center.cpincode %>" required>
+            
+            <label for="buildingno">Building Number:</label>
+            <input type="text" id="buildingno" name="buildingno" value="<%= center.buildingno %>" required>
+            
+            <label for="fullname">Contact Name:</label>
+            <input type="text" id="fullname" name="fullname" value="<%= center.fullname %>" required>
+            
+            <label for="address">Contact Address:</label>
+            <input type="text" id="address" name="address" value="<%= center.address %>" required>
+            
+            <label for="phno">Contact Phone Number:</label>
+            <input type="text" id="phno" name="phno" value="<%= center.phno %>" required>
+            
+            <label for="email">Contact Email:</label>
+            <input type="email" id="email" name="email" value="<%= center.email %>" required>
+            
+            <label for="type">Center Type:</label>
+            <input type="text" id="type" name="type" value="<%= center.type %>" required>
+            
+            <button type="submit">Save</button>
+        </form>
+        <form action="/admin/managecenter/<%= center._id %>">
+            <button id="back">Back</button>
+        </form>
+    </div>
+</body>
+</html>

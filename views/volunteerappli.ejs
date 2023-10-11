@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Application Form</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/volunteerappli.css">
+   
+
+</head>
+
+<body>
+    <h2 id="volappli"> VOLUNTEER APPLICATION FORM </h2>
+    <div class="regform">
+        <form action='/volApplication' id="myForm" method="POST" enctype="multipart/form-data"  onsubmit="return validateForm(event)">
+
+            <div class="per-container">
+                <span class="heading">Personal Details:</span>
+                <div class="personal">
+                    <input type="text" class="firstname" name="firstname" placeholder="first name">
+                    <input type="text" class="lastname" name="lastname" placeholder="last name">
+
+                    <input type="number" class="age" name="age" placeholder="age">
+                    <input type="date" class="dob" name="dobFormatted" placeholder="date of birth">
+
+                    <select class="gender" name="gender">
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <input id="a-no" type="text" data-type="adhaar-number" name="aadhar" maxLength="16"
+                        placeholder="Aadhar Number">
+                </div>
+                <div class="contact">
+                    <span>Contact Details:</span>
+                    <input id="phn" type="text" name="phno" maxLength="10" placeholder="Phone No">
+                    <input required type="email" id="email" name="email" placeholder="Email ID">
+                </div>
+
+                <div class="input-box">
+                    <span>Address Details:</span>
+                    <input type="text" name="address" placeholder="Residential Address" id="radd">
+                </div>
+
+                <div class="file-upload">
+                    <label id="upload"> Upload Photo :</label>
+                    <input type="file" name="image" accept="image/*">
+                </div>
+                
+
+                <div class="input_box">
+                    <label>Days available: </label>
+                    <input type="radio" id="weekdays" name="dayPreference" value="weekdays">
+                    <label for="weekdays">Weekdays</label><br>
+                    <input type="radio" id="weekends" name="dayPreference" value="weekends">
+                    <label for="weekends">Weekends</label><br>
+                    <input type="radio" id="flexible" name="dayPreference" value="flexible">
+                    <label for="flexible">Flexible</label><br>
+
+                </div>
+
+                <div class="cat">
+                    <label>Categories Preferred: </label>
+                    <input type="radio" id="Subjects" name="categories" value="Subjects">
+                    <label for="Subjects">Subjects</label><br>
+                    <input type="radio" id="MoralScience" name="categories" value="MoralScience">
+                    <label for="MoralScience">Moral Science</label><br>
+                    <input type="radio" id="Sports" name="categories" value="Sports">
+                    <label for="Sports">Sports</label><br>
+                    <input type="radio" id="Hygiene" name="categories" value="Hygiene">
+                    <label for="Hygiene">Hygiene</label><br>
+                    <input type="radio" id="Craft" name="categories" value="Craft">
+                    <label for="Craft">Craft</label><br>
+                    <input type="radio" id="SocialStudies" name="categories" value="SocialStudies">
+                    <label for="SocialStudies">Social Studies</label><br>
+                    <input type="radio" id="Others" name="categories" value="Others">
+                    <label for="Others">Others</label><br>
+                </div>
+
+                <div class="center">
+                    <label id="center" for="center">Choose a Center:</label>
+                    <select name="center" id="center">
+                      <% centers.forEach(function(center) { %>
+                        <option value="<%= center.cdistrict %>"><%= center.cdistrict %></option>
+                      <% }); %>
+                    </select>
+                  </div>
+           
+                <div class="submit-box">
+                    <input type="Submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+      function validateForm(event) {
+         
+     var firstname = document.forms["myForm"]["firstname"].value;
+     var lastname = document.forms["myForm"]["lastname"].value;
+     var email = document.forms["myForm"]["email"].value;
+     var phno = document.forms["myForm"]["phno"].value;
+     var age= document.forms["myForm"]["age"].value;
+     var dayPreference = document.forms["myForm"]["dayPreference"].value;
+     var categories = document.forms["myForm"]["categories"].value;
+     var aadhar = document.forms["myForm"]["aadhar"].value;
+
+
+     // Validate required fields
+     if (firstname === "" || lastname === "" || email === "" || phno === "" || age==="" || dayPreference === "" || categories === "") {
+       alert("Please fill in all the required fields.");
+       return false;
+     }
+
+       // Validate phone number
+       if (phno.length !== 10 || isNaN(phno)) {
+         alert("Please enter a valid 10-digit phone number.");
+         return false;
+       }
+
+       //validate adhaar number
+       if (aadhar.length !== 12 || isNaN(aadhar)) {
+       alert("Please enter a valid 12-digit Aadhar number.");
+       return false;
+       } 
+
+       // Validate email format
+       var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       if (!email.match(emailRegex)) {
+         alert("Please enter a valid email address.");
+         return false;
+       }
+
+       // Validate photo format
+       var photo = document.getElementById("photo");
+       var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+       if (!allowedExtensions.exec(photo.value)) {
+         alert("Please upload an image file (jpg, jpeg, png, or gif).");
+         return false;
+       }
+
+       return true;
+     }
+   
+ </script>
+</body>
+
+</html>

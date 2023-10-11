@@ -1,0 +1,31 @@
+<% layout('layout/volboilerplate') %>
+<div class="report-header">
+    <h2>View Report</h2>
+</div>
+
+
+<table class="report-table">
+    <thead>
+        <tr>
+            <th>Class Title</th>
+            <th>Volunteer ID</th>
+            <th>Center ID</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(let reports of report) { %>
+        <tr>
+            <td><%= reports.title %></td>
+            <td><%= reports.volunteer %></td>
+            <td><%= reports.center %></td>
+            <td>
+                <a href="/admin/viewreport/<%= reports._id %>">View More</a>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+</div>
+</div>
+</div>

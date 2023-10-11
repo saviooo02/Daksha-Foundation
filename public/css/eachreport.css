@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 300, 400, 500, 600, 700, 800, 908&display-swap');
+
+*{
+    background-color: #def2f1;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 1.3rem;
+    text-decoration: underline;
+    color: #2b7a78;
+    position: relative;
+    left: 700px;
+}
+
+.container{
+    width: 800px;
+    height: 400px;
+    background-color: #fff;
+    position: relative;
+    left: 350px;
+    color: #2b7a78;
+}
+
+.container h3{
+    background-color: #fff;
+    font-size: 1.1rem;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#delete-button{
+    color: #fff;
+    background-color: maroon;
+    position: relative;
+    margin-left: 700px;
+    top: -70px;
+    font-size: 1.1rem;
+}
+
+#back{
+    color: #2b7a78;
+    font-size: 1.3rem;
+    border: 0;
+    background-color: #def2f1;
+    color: #2b7a78;
+}

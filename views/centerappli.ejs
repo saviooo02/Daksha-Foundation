@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centre application form</title>
+</head>
+<link rel="stylesheet" href="/css/centerappli.css">
+
+<body>
+  <h2 id="cenappli">CENTRE APPLICATION FORM</h2>
+  <div class="main">
+    <form method="POST" action="/centerappli" enctype="multipart/form-data" id="myForm" onsubmit="return validateForm(event)">
+      <div class="input-field">
+        <span class="heading">Applicant Details:</span>
+        <div class="applicant">
+          <input type="text" name="fullname" class="name" placeholder="Applicant name">
+          <input type="text" name="address" class="address" placeholder="Address" id="radd">
+          <input type="text" name="phno" data-type="Phone No" maxLength="10" placeholder="Phone No" class="phno">
+          <input type="text" name="email" class="email" placeholder="Email ID">
+        </div>
+
+        <div class="input_box">
+          <label>Centre Type:</label>
+          <input type="radio" name="type" value="Private Building"><span>Private Building</span>
+          <input type="radio" name="type" value="Govt Building"><span>Govt Building</span>
+          <input type="radio" name="type" value="School"><span>School</span>
+          <input type="radio" name="type" value="Others"><span>Others</span>
+        </div>
+
+        <div class="input-box">
+          <span>Center Details:</span>
+          <input type="text" id="add" name="caddress" placeholder="Address" required>
+          <select id="cdistrict" name="cdistrict" required>
+            <option value="" disabled selected>Select District</option>
+            <option value="Kasaragod">Kasaragod</option>
+            <option value="Kannur">Kannur</option>
+            <option value="Kozhikode">Kozhikode</option>
+            <option value="Wayanad">Wayanad</option>
+            <option value="Malappuram">Malappuram</option>
+            <option value="Palakkad">Palakkad</option>
+            <option value="Thrissur">Thrissur</option>
+            <option value="Ernakulam">Ernakulam</option>
+            <option value="Kottayam">Kottayam</option>
+            <option value="Idukki">Idukki</option>
+            <option value="Alappuzha">Alappuzha</option>
+            <option value="Pathanamthitta">Pathanamthitta</option>
+            <option value="Kollam">Kollam</option>
+            <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+          </select>
+          <input type="text" id="panchayath" name="cpanchayath" placeholder="Panchayath" required>
+          <input type="text" id="pincode" name="cpincode" placeholder="Pincode" required>
+        </div>
+
+        <div class="input_box">
+          <span id="bldno">Building Number:</span>
+          <input type="text" name="buildingno" class="no" placeholder="Building number">
+        </div>
+
+        <span id="upload">Upload Photos (Upto 3):</span>
+        <input id="photoupload" type="file" name="photos" multiple required>
+
+        <div>
+          <input class="butt" type="submit" value="Submit">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function validateForm(event) {
+      var fullname = document.forms["myForm"]["fullname"].value;
+      var address = document.forms["myForm"]["address"].value;
+      var phno = document.forms["myForm"]["phno"].value;
+      var email = document.forms["myForm"]["email"].value;
+      var type = document.querySelector('input[name="type"]:checked');
+      var caddress = document.forms["myForm"]["caddress"].value;
+      var cdistrict = document.forms["myForm"]["cdistrict"].value;
+      var cpanchayath = document.forms["myForm"]["cpanchayath"].value;
+      var cpincode = document.forms["myForm"]["cpincode"].value;
+      var buildingno = document.forms["myForm"]["buildingno"].value;
+      var photos = document.forms["myForm"]["photos"].files;
+  
+      // Validate required fields
+      if (
+        fullname.trim() === "" ||
+        address.trim() === "" ||
+        phno.trim() === "" ||
+        email.trim() === "" ||
+        (!type || type.value.trim() === "") ||
+        caddress.trim() === "" ||
+        cdistrict.trim() === "" ||
+        cpanchayath.trim() === "" ||
+        cpincode.trim() === "" ||
+        buildingno.trim() === "" ||
+        photos.length === 0
+      ) {
+        alert("Please fill in all the required fields and upload at least one photo.");
+        return false;
+      }
+  
+      // Validate phone number
+      if (phno.length !== 10 || isNaN(phno)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return false;
+      }
+  
+      // Validate number of photos
+      if (photos.length < 1 || photos.length > 3) {
+        alert("Please upload between 1 and 3 photos.");
+        return false;
+      }
+  
+      // Validate photo formats
+      var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+      for (var i = 0; i < photos.length; i++) {
+        if (!allowedExtensions.exec(photos[i].name)) {
+          alert("Please upload image files (jpg, jpeg, png, or gif).");
+          return false;
+        }
+      }
+  
+      return true;
+    }
+  </script>
+ 
+
+</body>
+
+</html>
